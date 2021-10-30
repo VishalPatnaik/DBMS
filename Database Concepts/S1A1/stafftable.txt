@@ -1,0 +1,32 @@
+create table Staff(
+eno varchar(6) primary key,
+surname char(20),
+givenname char(20),
+department char(30),
+major char(30)
+);
+
+Query OK, 0 rows affected (0.15 sec)
+
+insert into Staff(eno,surname,givenname,department,major) values("e123","Bowl","Alex","Maths","Lecturer");
+
+Query OK, 1 row affected (0.07 sec)
+
+insert into Staff(eno,surname,givenname,department,major) values("e205","Cox","Kevin","CSC","Associate Professor");
+
+Query OK, 1 row affected (0.04 sec)
+
+insert into Staff(eno,surname,givenname,department,major) values("e301","Jones","David","Arts","Senior Lecturer");
+
+Query OK, 1 row affected (0.02 sec)
+
+select * from Staff;
+
++------+---------+-----------+------------+---------------------+
+| eno  | surname | givenname | department | major               |
++------+---------+-----------+------------+---------------------+
+| e123 | Bowl    | Alex      | Maths      | Lecturer            |
+| e205 | Cox     | Kevin     | CSC        | Associate Professor |
+| e301 | Jones   | David     | Arts       | Senior Lecturer     |
++------+---------+-----------+------------+---------------------+
+3 rows in set (0.00 sec)

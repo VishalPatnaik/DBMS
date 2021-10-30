@@ -1,0 +1,155 @@
+2.1 
+SELECT fieldnum, title
+FROM field
+where (fieldnum>=500 and fieldnum<=599)
+ or (upper(title) like 'DATA %'
+ or upper(title) like '% DATA %'
+ or upper(title) like '% DATA');
+ 
++----------+--------------------------------------------------------+
+| fieldnum | title                                                  |
++----------+--------------------------------------------------------+
+|      310 | Single Data Stream Architectures                       |
+|      311 | Multiple Data Stream Architectures                     |
+|      364 | Data Structures                                        |
+|      365 | Data Storage Representations                           |
+|      500 | Performance Analysis and Design Aids                   |
+|      501 | Data Communication Devices                             |
+|      502 | General                                                |
+|      503 | Input/output and Data communications                   |
+|      504 | Miscellaneous                                          |
+|      505 | Reliability - Testing and Fault-Tolerance              |
+|      506 | General                                                |
+|      507 | Reliability - Testing and Fault-Tolerance              |
+|      508 | Performance Analysis and Design Aids                   |
+|      509 | Design Styles                                          |
+|      510 | General                                                |
+|      511 | Miscellaneous                                          |
+|      512 | Microprogram Design Aids                               |
+|      513 | Control Structure Performance Analysis and Design Aids |
+|      514 | Control Design Styles                                  |
+|      515 | General                                                |
+|      516 | Miscellaneous                                          |
+|      517 | General                                                |
+|      518 | General                                                |
+|      519 | Miscellaneous                                          |
+|      520 | General                                                |
+|      521 | Large and Medium (Mainframe) Computers                 |
+|      522 | Minicomputers                                          |
+|      523 | Microcomputers                                         |
+|      524 | Miscellaneous                                          |
+|      525 | Miscellaneous                                          |
+|      526 | Coding                                                 |
+|      527 | Miscellaneous                                          |
+|      528 | File Systems Management                                |
+|      529 | Reliability                                            |
+|      530 | Miscellaneous                                          |
+|      531 | Miscellaneous                                          |
+|      532 | Data                                                   |
+|      533 | General                                                |
+|      534 | Data Encryption                                        |
+|      535 | Coding and Information Theory                          |
+|      536 | Theory of Computation                                  |
+|      537 | General                                                |
+|      538 | Modes of Computation                                   |
+|      539 | Miscellaneous                                          |
+|      540 | General                                                |
+|      541 | Miscellaneous                                          |
+|      542 | General                                                |
+|      543 | Miscellaneous                                          |
+|      544 | General                                                |
+|      545 | Miscellaneous                                          |
+|      546 | Miscellaneous                                          |
+|      547 | Mathematics of Computing                               |
+|      548 | General                                                |
+|      549 | Numerical Analysis                                     |
+|      550 | Interpolation                                          |
+|      551 | Approximation                                          |
+|      552 | Quadrature and Numerical Differentiation               |
+|      553 | Roots of Nonlinear Equations                           |
+|      554 | Ordinary Differential Equations                        |
+|      555 | Partial Differential Equations                         |
+|      556 | Integral Equations                                     |
+|      557 | Miscellaneous                                          |
+|      558 | Discrete Mathematics                                   |
+|      559 | General                                                |
+|      560 | Miscellaneous                                          |
+|      561 | Miscellaneous                                          |
+|      562 | Physical Design                                        |
+|      563 | Languages                                              |
+|      564 | Systems                                                |
+|      565 | Database Administration                                |
+|      566 | Information Storage and Retrieval                      |
+|      567 | General                                                |
+|      568 | Content Analysis and Indexing                          |
+|      569 | Systems and Software                                   |
+|      570 | Online Information Systems                             |
+|      571 | Library Automation                                     |
+|      572 | Miscellaneous                                          |
+|      573 | Types of Systems                                       |
+|      574 | Communications Applications                            |
+|      575 | Miscellaneous                                          |
+|      576 | Computing Methodologies                                |
+|      577 | General                                                |
+|      578 | Algebraic Manipulation                                 |
+|      579 | General                                                |
+|      580 | Miscellaneous                                          |
+|      581 | Programming Languages and Software                     |
+|      582 | General                                                |
+|      583 | Hardware Architecture                                  |
+|      584 | Graphics Systems                                       |
+|      585 | Methodology and Techniques                             |
+|      586 | General                                                |
+|      587 | Digitization                                           |
+|      588 | Enhancement                                            |
+|      589 | Restoration                                            |
+|      590 | Reconstruction                                         |
+|      591 | Segmentation                                           |
+|      592 | Miscellaneous                                          |
+|      593 | General                                                |
+|      594 | Models                                                 |
+|      595 | Design Methodology                                     |
+|      596 | Implementation                                         |
+|      597 | Simulation Theory                                      |
+|      598 | Simulation Output Analysis                             |
+|      599 | Simulation Support Systems                             |
+|      605 | Administrative Data Processing                         |
++----------+--------------------------------------------------------+
+105 rows in set (0.00 sec)
+
+2.2 
+Select AUTHOR.panum, FIELD.title, AUTHOR.ACNUM
+From AUTHOR, INTEREST, FIELD
+Where AUTHOR.ACNUM = INTEREST.ACNUM;
+
+2.3
+select count(*)
+from ACADEMIC
+where DEPTNUM = 100;
+
+17
+
+2.4
+SELECT * 
+FROM PAPER
+ORDER BY TITLE ASC;
+
+2.5
+SELECT FIELDNUM, TITLE
+FROM FIELD
+where TITLE like 'DATA %';
+
++----------+------------------------------+
+| FIELDNUM | TITLE                        |
++----------+------------------------------+
+|      364 | Data Structures              |
+|      365 | Data Storage Representations |
+|      501 | Data Communication Devices   |
+|      534 | Data Encryption              |
++----------+------------------------------+
+
+2.6
+Select AUTHOR.PANUM, PAPER.title, AUTHOR.ACNUM
+From AUTHOR, PAPER;
+
+2.7

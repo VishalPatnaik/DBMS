@@ -1,0 +1,38 @@
+create table Enrol (
+sno varchar(10),
+cno varchar(10),
+grade varchar(10) UNIQUE,
+CONSTRAINT student_sno_fk foreign key(sno) references Student(sno),
+CONSTRAINT class_cno_fk foreign key(cno) references Class(cno),
+CONSTRAINT table_pk primary key(sno, cno)
+);
+
+Query OK, 0 rows affected (0.21 sec)
+
+insert into Enrol(sno, cno, grade) values("s1001", "isys155", "HD");
+
+Query OK, 1 row affected (0.06 sec)
+
+insert into Enrol(sno, cno, grade) values("s1003", "cosc121", NULL);
+
+Query OK, 1 row affected (0.09 sec)
+
+insert into Enrol(sno, cno, grade) values("s1005", "artc131", "CR");
+
+Query OK, 1 row affected (0.04 sec)
+
+insert into Enrol(sno, cno, grade) values("s1006", "cosc101", NULL);
+
+Query OK, 1 row affected (0.06 sec)
+
+select * from Enrol;
+
++-------+---------+-------+
+| sno   | cno     | grade |
++-------+---------+-------+
+| s1003 | cosc121 | NULL  |
+| s1006 | cosc101 | NULL  |
+| s1005 | artc131 | CR    |
+| s1001 | isys155 | HD    |
++-------+---------+-------+
+4 rows in set (0.00 sec)

@@ -1,0 +1,41 @@
+create table Student (
+sno varchar(6) primary key,
+surname char(12),
+givenname char(10),
+major char(10)
+);
+
+Query OK, 0 rows affected (0.25 sec)
+
+insert into Student(sno,surname,givenname,major) values("s1001","Smith","Tom","History");
+
+Query OK, 1 row affected (0.07 sec)
+
+insert into Student(sno,surname,givenname,major) values("s1002","Chin","Ann","Maths");
+
+Query OK, 1 row affected (0.02 sec)
+
+insert into Student(sno,surname,givenname,major) values("s1003","Lee","Perry","Arts");
+
+Query OK, 1 row affected (0.04 sec)
+
+insert into Student(sno,surname,givenname,major) values("s1005","Smith","John","History");
+
+Query OK, 1 row affected (0.05 sec)
+
+insert into Student(sno,surname,givenname,major) values("s1006","River","Jane","Art");
+
+Query OK, 1 row affected (0.18 sec)
+
+select * from Student;
+
++-------+---------+-----------+---------+
+| sno   | surname | givenname | major   |
++-------+---------+-----------+---------+
+| s1001 | Smith   | Tom       | History |
+| s1002 | Chin    | Ann       | Maths   |
+| s1003 | Lee     | Perry     | Arts    |
+| s1005 | Smith   | John      | History |
+| s1006 | River   | Jane      | Art     |
++-------+---------+-----------+---------+
+5 rows in set (0.00 sec)
